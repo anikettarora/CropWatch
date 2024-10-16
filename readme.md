@@ -2,32 +2,27 @@
 
 Crop Watch is a plant disease detection system that utilizes a Convolutional Neural Network (CNN) model for early detection and better crop management. This project aims to help farmers and agricultural professionals identify plant diseases quickly and accurately to improve crop yields and reduce losses.
 
-## Table of Contents
-- [Features](#features)
-- [Architecture](#architecture)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Features
-- **Early Disease Detection**: Classifies plant diseases with high accuracy for proactive crop management.
-- **User-Friendly Interface**: Intuitive design to facilitate easy interaction for users.
-- **Scalable Model**: Designed for efficiency, suitable for real-world applications in agriculture.
-
 ## Architecture
-The architecture of the Crop Watch system includes:
 
-- **Image Processing**: Images are resized to 128x128 pixels and converted into arrays suitable for CNN input.
-- **Convolutional Neural Network**: The model consists of multiple Conv2D and MaxPooling2D layers for feature extraction, alongside Dropout layers to prevent overfitting.
-- **Training Phase**: 
-  - Utilizes the Adam optimizer with a learning rate set for efficient training.
-  - Trains over 10 epochs with a batch size of 32, minimizing error between predicted and actual outputs.
-  - Employs a softmax layer for converting raw outputs into class probabilities.
-- **Performance Analysis**: The model is assessed using a test set to evaluate its generalization capabilities on unseen data.
+So, here's how the Crop Watch system works behind the scenes:
+
+1. **Image Processing**: When you upload a plant image, we first resize it to 128x128 pixels. This makes it easier for our model to analyze the image. We also convert it into a format that our Convolutional Neural Network (CNN) can understand.
+
+2. **Convolutional Neural Network (CNN)**: At the heart of our system is a CNN, which is like the brain of the operation! It has several layers:
+   - **Conv2D and MaxPooling2D Layers**: These layers work together to spot patterns and features in the images. Think of them as filters that help highlight important details.
+   - **Dropout Layers**: We’ve added these to prevent overfitting, which means our model won’t just memorize the training data but will actually learn to recognize diseases in new images too.
+
+3. **Training Phase**: 
+   - We use the Adam optimizer for efficient training, tweaking the model’s weights to minimize the errors between what it predicts and the actual results.
+   - The training happens over 10 epochs with a batch size of 32. Basically, we feed the model a group of 32 images at a time to help it learn better.
+   - At the end of training, we use a softmax layer to turn the model’s raw outputs into easy-to-understand probabilities for each disease class.
+
+4. **Performance Analysis**: Once the model is trained, we put it to the test! We evaluate its performance using a separate set of images to see how well it can identify diseases it hasn’t seen before.
+
+
 
 ## Installation
-1. Clone the repository:
    ```bash
-   git clone https://github.com/anikettarora/CropWatch.git
-   cd CropWatch
+   pip install -r requirements.txt
+
+   streamlit run app.py
