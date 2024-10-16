@@ -20,6 +20,8 @@ So, here's how the Crop Watch system works behind the scenes:
 4. **Performance Analysis**: Once the model is trained, we put it to the test! We evaluate its performance using a separate set of images to see how well it can identify diseases it hasn’t seen before.
 
 
+This architecture works really well and has been trained on the [Plant Disease Dataset](https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset?select=New+Plant+Diseases+Dataset(Augmented)). 
+
 
 ## Installation
    ```bash
