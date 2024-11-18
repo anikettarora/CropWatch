@@ -27,4 +27,9 @@ This architecture works really well and has been trained on the [Plant Disease D
    ```bash
    pip install -r requirements.txt
 
+   #for using the prediction model only
    streamlit run app.py
+
+   
+   #for using the prediction and chatbot app
+   streamlit run chat.py
